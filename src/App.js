@@ -80,12 +80,12 @@ displayFaceBox = (boxes)=>{
 
   onButtonSubmit = ()=>{
     this.setState({imageUrl:this.state.input},()=>{
-       axios.post('http://localhost:3000/imageUrl',{
+       axios.post('https://aqueous-ocean-26324.herokuapp.com/imageUrl',{
         input: this.state.imageUrl
        })
        .then(response=> {
         if(response.data){
-          axios.patch('http://localhost:3000/image',{
+          axios.patch('https://aqueous-ocean-26324.herokuapp.com/image',{
             id: this.state.user.id
           })
           .then(count=>{

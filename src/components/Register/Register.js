@@ -18,7 +18,7 @@ class Register extends Component {
 		this.setState({name:event.target.value})
 	}
 	onSubmitSignIn = ()=>{
-		axios.post('http://localhost:3000/register',{
+		axios.post('https://aqueous-ocean-26324.herokuapp.com/register',{
 			"email":this.state.email,
 			"password": this.state.password,
 			"name": this.state.name,
